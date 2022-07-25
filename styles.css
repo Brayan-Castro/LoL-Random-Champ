@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.line{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 500px;
+    height: 1px;
+}
+button{
+    background-image: url("https://cdn.discordapp.com/attachments/1001249473315487765/1001249584019951777/random_icon.png");
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.buttonsContainer{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.tudo{
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+html{
+    height: 100vh;
+    background-image: url('https://cdn.discordapp.com/attachments/1001249473315487765/1001249583642451968/bg-image.png?width=653&height=367');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title{
+    font-size: 3rem;
+    margin-bottom: 100px;
+
+}

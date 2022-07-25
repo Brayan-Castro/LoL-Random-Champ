@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Random</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="tudo">
+        <p class="title">League of Legends Random Champion</p>
+        <div>Aleatório com base numa lista de campeões (vírgula entre nomes)</div>
+        <div class="buttonsContainer">
+            <input class="champList" type="text">
+            <button class="btnList" type="submit"></button>
+        </div>
+        <div class="line"></div>
+        <div>Aleatório com Todos os champs ou Lane específica</div>
+        <div class="buttonsContainer">
+            <select name="select" class="select">
+                <option value="all">Todos os Champs</option>
+                <option value="top">Top</option>
+                <option value="jg">Jungle</option>
+                <option value="mid">Mid</option>
+                <option value="adc">AD Carry</option>
+                <option value="sup">Suporte</option>
+            </select>
+            <button type="submit" class="btnSelect"></button>
+        </div>
+        <div class="line"></div>
+        <div class="resultChamp"></div>
+    </div>
+    <script src="generator.js"></script>
+</body>
+</html>
