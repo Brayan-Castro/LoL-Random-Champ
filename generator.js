@@ -1,11 +1,18 @@
 let btnList = document.querySelector('.btnList')
 let btnSelect = document.querySelector('.btnSelect')
 let resultChamp = document.querySelector('.resultChamp')
-let lolBuild = ['Full Crit', 'Full Ap', 'Full Tank', 'Full Lethality', 'Full Sup', 'Bruiser (Tank + AD)', 'Battle Mage (Tank + AP)', 'Mixed Build (AP + AD)']
+let buildMiticos = ["Colhedor Noturno","Regenerador de Pedra Lunar","Proteção Imutável","Medalhão dos Solari de Ferro","Coroa da Rainha Esquartejada","Glacieterno","Manopla do Raio de Gelo","Quimiotanque Turbo","Crepúsculo de Draktharr","Garra do Espreitador","Eclipse","Angústia de Liandry","Tormenta de Luden","Explocinturão Hextec","Criafendas","Égide de Fogo Solar","Quebrapassos","Hemodrenario","Ruptor Divino","Força de Trindade","Mata Krakens","Força do Vendaval","Arco Escudo Imoral"]
+let lolBuild = ["Ladrão de Almas de Mejai","Turíbulo Ardente","Putrificador Quimtec","Cajado Aquafluxo","Benção de Mikael","Redenção","Glaive Sombria","Juramento de Cavaleiro","Convergência de Zeke","Coração Congelado","Murilonomicon","Canhão Fumegante","Lembrete Mortal","Correntes de Anatema","Cajado do Arcanjo","Véu de Banshee","Centro de Cristal de Rylai","Ampulheta de Zonya","Presa da Serpente","Lâmina da Fúria de Guinsoo","Furacão de Runaan","Dançarina Fantasma","Serrespada Quimiopunk","Aproximação Invernal","Chuva de Canivete","Máscara Abissal","Pressagio de Randuin","Armadura de Espinhos","Cajado do Vazio","Colhedor de Essência","Quebracascos","Anjo Guardião","Manamune","Limiar da Noite","Mandíbula de MalMorbius","Semblante Espiritual","Força da Natureza","Couraça do Defunto","Dente de Na'Shor","Chama Sombria","Foco do Horizonte","Perdição de Lich","Ímpeto Cósmico","Abraço Domaniaco","Lâmina Fantasma de Youmuu","A Coletora","Arco de Axioma","Cimitarra Mercurial","Lembranças do Lorde Dominik","Alvorada de Pratania","Armadura de Warmog","Limite da Razão","Cutelo Negro","Sinal de Sterak","Rancor de Serylda","Placa Gargolitica","Espada do Gay Destruído","Hidra Raivosa","Hidra Titânica","Dança da Morte","Gume do Infinito","Adagas Rápidas Navori","Sedenta por Sangue","Capuz da Morte de Megatron","Hino Bélico de Shurelya","Mandato Imperial"]
+function buildRandomizer(){
+    return Math.floor(Math.random() * (lolBuild.length))
+}
+function mythicRandomizer(){
+    return Math.floor(Math.random() * (buildMiticos.length))
+}
 btnList.addEventListener('click',() =>{
     let madeList = document.querySelector('.champList').value
     let madeListArray = madeList.split(",")
-    resultChamp.innerHTML = madeListArray[Math.floor(Math.random() * (madeListArray.length))] + ', Build: ' + lolBuild[Math.floor(Math.random() * (lolBuild.length))]
+    resultChamp.innerHTML = madeListArray[Math.floor(Math.random() * (madeListArray.length))] + ', Build: ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()] +  ', ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()]
 })
 btnSelect.addEventListener('click', () =>{
     let lolChamps = []
@@ -28,8 +35,10 @@ btnSelect.addEventListener('click', () =>{
         break;
         case 'sup':
         lolChamps.push('Alistar', 'Ashe', 'Bardo', 'Blitzcrank', 'Brand', 'Braum', 'Janna', 'Karma', 'Leona', 'Lulu', 'Lux', 'Maokai', 'Morgana', 'Nami', 'Nautilus', 'Pantheon', 'Pyke', 'Rakan', 'Rell', 'Renata Glasc', 'Senna', 'Seraphine', 'Sona', 'Soraka', 'Swain', 'Taric', 'Thresh', "Vek'Koz", 'Xerath', 'Yuumi', 'Zilean', 'Zyra')
-        lolBuild.push('Smite Sup')
         break;
     }
-    resultChamp.innerHTML = lolChamps[Math.floor(Math.random() * (lolChamps.length))] + ', Build: ' + lolBuild[Math.floor(Math.random() * (lolBuild.length))];
+    function fullChampRandomizer(){
+        return Math.floor(Math.random() * (lolChamps.length))
+    }
+    resultChamp.innerHTML = (lolChamps[fullChampRandomizer()] + ', Build: ' + buildMiticos[mythicRandomizer()] + ', ' + lolBuild[buildRandomizer()] +  ', ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()])
 })
