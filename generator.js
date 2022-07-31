@@ -12,7 +12,7 @@ function mythicRandomizer(){
 btnList.addEventListener('click',() =>{
     let madeList = document.querySelector('.champList').value
     let madeListArray = madeList.split(",")
-    resultChamp.innerHTML = madeListArray[Math.floor(Math.random() * (madeListArray.length))] + ', Build: ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()] +  ', ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()]
+    resultChamp.innerHTML = madeListArray[Math.floor(Math.random() * (madeListArray.length))] + ', Build: ' + buildMiticos[mythicRandomizer()] + ', ' + lolBuild[buildRandomizer()] +  ', ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()] + ', ' + lolBuild[buildRandomizer()]
 })
 btnSelect.addEventListener('click', () =>{
     let lolChamps = []
